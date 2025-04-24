@@ -30,11 +30,17 @@ document.getElementById('filtro-input').addEventListener('input', function (e) {
 // Aggiunta/Aggiornamento prodotto
 document.getElementById('form-prodotti').addEventListener('submit', function (e) {
   e.preventDefault();
-  const nome = document.getElementById('nome-prod').value;
-  const categoria = document.getElementById('categoria-prod').value;
-  const descrizione = document.getElementById('descrizione-prod').value;
-  const img = document.getElementById('immagine-prod').value;
+  const nome = document.getElementById('nome-prod').value.trim();
+  const categoria = document.getElementById('categoria-prod').value.trim();
+  const descrizione = document.getElementById('descrizione-prod').value.trim();
+  const img = document.getElementById('immagine-prod').value.trim();
 
+  if (!nome || !categoria || !descrizione || !img) {
+    alert("❗ Tutti i campi sono obbligatori.");
+    return;
+  }
+
+  // Sostituisce il prodotto se esiste
   listaCompleta = listaCompleta.filter(p => p.nome !== nome);
   listaCompleta.push({ nome, categoria, descrizione, img });
 
@@ -74,16 +80,16 @@ document.getElementById('file-import').addEventListener('change', function (e) {
         mostraProdotti(listaCompleta);
         alert('✅ Prodotti importati con successo!');
       } else {
-        alert('❌ Formato JSON non valido.');
+        alert('❌ Il file JSON non contiene un array.');
       }
     } catch (err) {
-      alert('❌ Errore nel file JSON.');
+      alert('❌ Errore durante l’importazione.');
     }
   };
   reader.readAsText(file);
 });
 
-// Algoritmo base di suggerimento
+// Suggerimenti personalizzati (algoritmo semplificato)
 document.getElementById('algoritmo-form').addEventListener('submit', function (e) {
   e.preventDefault();
   const tipo = document.getElementById('tipo-attivita').value;
@@ -93,7 +99,7 @@ document.getElementById('algoritmo-form').addEventListener('submit', function (e
   risultati.innerHTML = `<p>Attrezzature consigliate per <strong>${tipo}</strong> con circa <strong>${num}</strong> veicoli/mese.</p>`;
 });
 
-// Nascondi modulo interno se non ?admin=1
+// Nasconde modulo e strumenti se non è presente ?admin=1
 if (!window.location.search.includes('admin=1')) {
   const gestione = document.getElementById('modulo-gestione');
   const tools = document.getElementById('tools-prodotti');
@@ -101,5 +107,5 @@ if (!window.location.search.includes('admin=1')) {
   if (tools) tools.style.display = 'none';
 }
 
-// Mostra prodotti iniziali
+// Mostra i prodotti all’avvio
 mostraProdotti(listaCompleta);
