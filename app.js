@@ -32,17 +32,21 @@ document.getElementById('filtro-input').addEventListener('input', function (e) {
 });
 
 mostraProdotti(prodotti);
-// Carica prodotti da localStorage o array statico
-function caricaProdotti() {
-  const dati = localStorage.getItem('prodotti');
-  return dati ? JSON.parse(dati) : prodotti;
-}
+let listaCompleta = [];
 
-// Salva in localStorage e aggiorna visualizzazione
-function salvaProdotti(lista) {
-  localStorage.setItem('prodotti', JSON.stringify(lista));
-  mostraProdotti(lista);
-}
+fetch('data/prodotti.json')
+  .then(response => response.json())
+  .then(data => {
+    listaCompleta = data;
+    mostraProdotti(listaCompleta);
+  });
+
+// Funzione di filtro input
+document.getElementById('filtro-input').addEventListener('input', function (e) {
+  const valore = e.target.value.toLowerCase();
+  const filtrati = listaCompleta.filter(p => p.nome.toLowerCase().includes(valore) || p.categoria.toLowerCase().includes(valore));
+  mostraProdotti(filtrati);
+});
 
 // Listener modulo interno
 document.getElementById('form-prodotti').addEventListener('submit', function (e) {
