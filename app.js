@@ -32,3 +32,33 @@ document.getElementById('filtro-input').addEventListener('input', function (e) {
 });
 
 mostraProdotti(prodotti);
+// Carica prodotti da localStorage o array statico
+function caricaProdotti() {
+  const dati = localStorage.getItem('prodotti');
+  return dati ? JSON.parse(dati) : prodotti;
+}
+
+// Salva in localStorage e aggiorna visualizzazione
+function salvaProdotti(lista) {
+  localStorage.setItem('prodotti', JSON.stringify(lista));
+  mostraProdotti(lista);
+}
+
+// Listener modulo interno
+document.getElementById('form-prodotti').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const nome = document.getElementById('nome-prod').value;
+  const categoria = document.getElementById('categoria-prod').value;
+  const descrizione = document.getElementById('descrizione-prod').value;
+  const img = document.getElementById('immagine-prod').value;
+
+  const nuovaLista = caricaProdotti().filter(p => p.nome !== nome);
+  nuovaLista.push({ nome, categoria, descrizione, img });
+  salvaProdotti(nuovaLista);
+  
+  alert('Prodotto aggiunto o aggiornato!');
+  this.reset();
+});
+
+// All'avvio, carica prodotti
+mostraProdotti(caricaProdotti());
