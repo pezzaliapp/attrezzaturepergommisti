@@ -59,3 +59,15 @@ footer {
   background: #eee;
   margin-top: 2rem;
 }
+#modulo-gestione {
+  background-color: #fff4e6;
+  padding: 2rem;
+  border-top: 2px dashed #ccc;
+  margin-top: 2rem;
+}
+
+#modulo-gestione form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
