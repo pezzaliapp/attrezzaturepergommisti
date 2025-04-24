@@ -62,3 +62,10 @@ document.getElementById('form-prodotti').addEventListener('submit', function (e)
 
 // All'avvio, carica prodotti
 mostraProdotti(caricaProdotti());
+// Nascondi la sezione di gestione se non c'è ?admin=1 nell'URL
+if (!window.location.search.includes('admin=1')) {
+  const gestione = document.getElementById('modulo-gestione');
+  if (gestione) {
+    gestione.style.display = 'none';
+  }
+}
