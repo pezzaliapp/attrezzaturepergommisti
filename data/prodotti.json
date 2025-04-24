@@ -1,0 +1,21 @@
+[
+  {
+    "nome": "Smontagomme Professionale Moto",
+    "categoria": "moto",
+    "descrizione": "Smontagomme automatico per ruote moto fino a 21 pollici.",
+    "img": "img/smontagomme-moto.jpg"
+  },
+  {
+    "nome": "Equilibratrice per Auto",
+    "categoria": "auto",
+    "descrizione": "Bilanciatura digitale per cerchi auto e trasporto leggero.",
+    "img": "img/equilibratrice-auto.jpg"
+  },
+  {
+    "nome": "Sollevatore a Pantografo",
+    "categoria": "trasporto-leggero",
+    "descrizione": "Sollevatore compatto per officine con spazi ridotti.",
+    "img": "img/sollevatore.jpg"
+  }
+  // ... fino a oltre 100 prodotti
+]
