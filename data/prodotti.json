@@ -1,21 +1,63 @@
 [
   {
-    "nome": "Smontagomme Professionale Moto",
+    "nome": "Smontagomme Moto Base",
     "categoria": "moto",
-    "descrizione": "Smontagomme automatico per ruote moto fino a 21 pollici.",
+    "descrizione": "Ideale per piccoli gommisti specializzati in moto.",
     "img": "img/smontagomme-moto.jpg"
   },
   {
-    "nome": "Equilibratrice per Auto",
+    "nome": "Sollevatore Centrale Moto",
+    "categoria": "moto",
+    "descrizione": "Sollevamento moto fino a 400kg con bloccaggio meccanico.",
+    "img": "img/sollevatore-moto.jpg"
+  },
+  {
+    "nome": "Equilibratrice Digitale Auto",
     "categoria": "auto",
-    "descrizione": "Bilanciatura digitale per cerchi auto e trasporto leggero.",
+    "descrizione": "Bilanciatrice elettronica per cerchi da 10\" a 24\".",
     "img": "img/equilibratrice-auto.jpg"
+  },
+  {
+    "nome": "Smontagomme Semi-Automatico Auto",
+    "categoria": "auto",
+    "descrizione": "Adatto a gommisti con volume medio di lavoro.",
+    "img": "img/smontagomme-auto.jpg"
   },
   {
     "nome": "Sollevatore a Pantografo",
     "categoria": "trasporto-leggero",
-    "descrizione": "Sollevatore compatto per officine con spazi ridotti.",
-    "img": "img/sollevatore.jpg"
+    "descrizione": "Sollevamento fino a 3.500 kg, installazione rapida.",
+    "img": "img/pantografo.jpg"
+  },
+  {
+    "nome": "Cric Idraulico Officina",
+    "categoria": "trasporto-leggero",
+    "descrizione": "Cric veloce a pompa doppia per interventi rapidi.",
+    "img": "img/cric.jpg"
+  },
+  {
+    "nome": "Sollevatore Truck 18T",
+    "categoria": "truck",
+    "descrizione": "Colonne mobili per camion fino a 18 tonnellate.",
+    "img": "img/sollevatore-truck.jpg"
+  },
+  {
+    "nome": "Smontagomme Truck XL",
+    "categoria": "truck",
+    "descrizione": "Compatibile con cerchi da 14'' a 56'', per uso intensivo.",
+    "img": "img/smontagomme-truck.jpg"
+  },
+  {
+    "nome": "Equilibratrice Industriale",
+    "categoria": "heavy-duty",
+    "descrizione": "Per mezzi agricoli e trasporti pesanti, ultra robusta.",
+    "img": "img/equilibratrice-heavy.jpg"
+  },
+  {
+    "nome": "Sollevatore Idraulico Heavy Duty",
+    "categoria": "heavy-duty",
+    "descrizione": "Sollevamento mezzi fino a 40 tonnellate, struttura rinforzata.",
+    "img": "img/sollevatore-heavy.jpg"
   }
-  // ... fino a oltre 100 prodotti
+]  // ... fino a oltre 100 prodotti
 ]
