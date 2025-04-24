@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attrezzature per Gommisti</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Attrezzature per Gommisti</h1>
+    <p>Soluzioni per Moto, Auto, Trasporto Leggero, Truck e Heavy Duty</p>
+  </header>
+
+  <section id="selezione">
+    <h2>Trova le attrezzature giuste per la tua attività</h2>
+    <form id="algoritmo-form">
+      <label for="tipo-attivita">Tipo attività:</label>
+      <select id="tipo-attivita">
+        <option value="moto">Moto</option>
+        <option value="auto">Auto</option>
+        <option value="trasporto-leggero">Trasporto Leggero</option>
+        <option value="truck">Truck</option>
+        <option value="heavy-duty">Heavy Duty</option>
+      </select>
+      <label for="numero-veicoli">Veicoli gestiti al mese:</label>
+      <input type="number" id="numero-veicoli" min="0" />
+      <button type="submit">Consiglia attrezzature</button>
+    </form>
+  </section>
+
+  <section id="risultati">
+    <!-- I risultati consigliati appariranno qui -->
+  </section>
+
+  <section id="catalogo">
+    <h2>Catalogo Attrezzature</h2>
+    <div id="filtro">
+      <input type="text" placeholder="Cerca per nome o servizio..." id="filtro-input" />
+    </div>
+    <div id="lista-prodotti">
+      <!-- Prodotti caricati dinamicamente -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 attrezzaturepergommisti.it</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
