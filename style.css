@@ -19,7 +19,7 @@ section {
   margin: auto;
 }
 
-h2 {
+h2, h3 {
   color: #222;
   margin-top: 0;
 }
@@ -59,6 +59,7 @@ footer {
   background: #eee;
   margin-top: 2rem;
 }
+
 #modulo-gestione {
   background-color: #fff4e6;
   padding: 2rem;
@@ -66,8 +67,10 @@ footer {
   margin-top: 2rem;
 }
 
-#modulo-gestione form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+#tools-prodotti {
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: #eef4ff;
+  border: 1px dashed #aac;
+  text-align: center;
 }
