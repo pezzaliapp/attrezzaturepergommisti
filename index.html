@@ -29,31 +29,33 @@
     </form>
   </section>
 
-  <section id="risultati">
-    <!-- I risultati consigliati appariranno qui -->
-  </section>
+  <section id="risultati"></section>
 
   <section id="catalogo">
     <h2>Catalogo Attrezzature</h2>
     <div id="filtro">
       <input type="text" placeholder="Cerca per nome o servizio..." id="filtro-input" />
     </div>
-    <div id="lista-prodotti">
-      <!-- Prodotti caricati dinamicamente -->
-    </div>
+    <div id="lista-prodotti"></div>
   </section>
 
   <section id="modulo-gestione">
-  <h2>🔒 Modulo Gestione Prodotti (uso interno)</h2>
-  <form id="form-prodotti">
-    <input type="text" id="nome-prod" placeholder="Nome prodotto" required />
-    <input type="text" id="categoria-prod" placeholder="Categoria (moto, auto...)" required />
-    <input type="text" id="descrizione-prod" placeholder="Descrizione tecnica" required />
-    <input type="text" id="immagine-prod" placeholder="URL immagine o img/nomefile.jpg" required />
-    <button type="submit">Aggiungi / Aggiorna Prodotto</button>
-  </form>
-</section>
-  
+    <h2>🔒 Modulo Gestione Prodotti (uso interno)</h2>
+    <form id="form-prodotti">
+      <input type="text" id="nome-prod" placeholder="Codice o Nome prodotto" required />
+      <input type="text" id="categoria-prod" placeholder="Categoria (moto, auto...)" required />
+      <input type="text" id="descrizione-prod" placeholder="Descrizione tecnica" required />
+      <input type="text" id="immagine-prod" placeholder="URL immagine o img/nomefile.jpg" required />
+      <button type="submit">Aggiungi / Aggiorna Prodotto</button>
+    </form>
+  </section>
+
+  <section id="tools-prodotti">
+    <h3>📤 Esporta / 📥 Importa Prodotti (solo uso interno)</h3>
+    <button onclick="esportaProdotti()">Esporta JSON</button>
+    <input type="file" id="file-import" accept=".json" />
+  </section>
+
   <footer>
     <p>&copy; 2025 attrezzaturepergommisti.it</p>
   </footer>
